@@ -33,3 +33,4 @@ C:\Users\almin\Documents\projects\ClipboardManager\ClipboardManager.Server\obj\D
 C:\Users\almin\Documents\projects\ClipboardManager\ClipboardManager.Server\obj\Debug\net8.0\ClipboardManager.Server.pdb
 C:\Users\almin\Documents\projects\ClipboardManager\ClipboardManager.Server\obj\Debug\net8.0\ClipboardManager.Server.genruntimeconfig.cache
 C:\Users\almin\Documents\projects\ClipboardManager\ClipboardManager.Server\obj\Debug\net8.0\ref\ClipboardManager.Server.dll
+C:\Users\almin\Documents\projects\ClipboardManager\ClipboardManager.Server\obj\Debug\net8.0\ClipboardManager.Server.sourcelink.json

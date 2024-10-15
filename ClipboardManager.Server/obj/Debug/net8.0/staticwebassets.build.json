@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mYd7oM3lY4ou4Y3aam5KfXtbtVop2Mc9wBd0nsh04f0=",
+  "Hash": "N4N93qkFqJCwgxR/0BGv+HS718bojKEPAMpoiMQ1zlU=",
   "Source": "ClipboardManager.Server",
   "BasePath": "_content/ClipboardManager.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "clipboardmanager.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
