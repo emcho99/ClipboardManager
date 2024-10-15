@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "mYd7oM3lY4ou4Y3aam5KfXtbtVop2Mc9wBd0nsh04f0=",
+  "Source": "ClipboardManager.Server",
+  "BasePath": "_content/ClipboardManager.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\almin\\Documents\\projects\\ClipboardManager\\clipboardmanager.client\\clipboardmanager.client.esproj",
+      "Version": 2,
+      "Source": "clipboardmanager.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
