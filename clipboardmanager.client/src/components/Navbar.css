@@ -1,13 +1,27 @@
+* {
+  font-family: "JetBrainsMono NF", "JetBrains Mono", sans-serif;
+}
 .navbar {
   display: flex;
   flex-direction: row;
-  font-family: "JetBrainsMono NF";
   font-weight: bold;
   justify-content: space-between;
   align-items: center;
   background-color: #282828;
   color: #a9b665;
   padding: 2rem;
+}
+
+.navbar .navbar-right a {
+  color: #a9b665;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar .navbar-left a {
+  color: #a9b665;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .navbar-center .navbar-links {

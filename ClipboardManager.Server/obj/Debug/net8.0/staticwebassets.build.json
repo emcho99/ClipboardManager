@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "N4N93qkFqJCwgxR/0BGv+HS718bojKEPAMpoiMQ1zlU=",
+  "Hash": "qki2gcv+75SIHwd61gftAMRhq1gkQtK1mOuB9guK8yU=",
   "Source": "ClipboardManager.Server",
   "BasePath": "_content/ClipboardManager.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\almin\\Documents\\projects\\ClipboardManager\\clipboardmanager.client\\clipboardmanager.client.esproj",
+      "Identity": "/home/emcho/ClipboardManager/clipboardmanager.client/clipboardmanager.client.esproj",
       "Version": 2,
       "Source": "clipboardmanager.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
