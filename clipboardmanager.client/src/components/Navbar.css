@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  font-family: "JetBrainsMono NF";
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  color: #a9b665;
+  padding: 2rem;
+}
+
+.navbar-center .navbar-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-center .navbar-links li {
+  margin-right: 1rem;
+}
+
+.navbar-center .navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  flex-direction: row;
+}
