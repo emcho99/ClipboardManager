@@ -5,26 +5,26 @@ const Navbar = () => {
   return (
 
 <nav className="navbar">
-    <div classname="navbar-right">
-        <a>Clipboard Manager</a>
+    <div className="navbar-right">
+        <a href="#">Clipboard Manager</a>
     </div>
 
-    <div classname="navbar-center">
-        <ul classname="navbar-links">
+    <div className="navbar-center">
+        <ul className="navbar-links">
             <li>
-                <a>Clipboard</a>
+                <a href="#">Clipboard</a>
               </li>
             <li>
-                <a>Friends</a>
+                <a href="#">Friends</a>
               </li>
             <li>
-                <a>Top Clips</a>
+                <a href="#">Top Clips</a>
               </li>
         </ul>
     </div>
 
-    <div classname="navbar-left">
-        <a>Settings</a>
+    <div className="navbar-left">
+        <a href="#">Settings</a>
     </div>
 </nav>
 );
