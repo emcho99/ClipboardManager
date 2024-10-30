@@ -25,7 +25,15 @@ const Navbar = () => {
     </div>
 
     <div className="navbar-left">
-        <Link to="/Settings">Settings</Link>
+    <div className="wrap">
+   <div className="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+     </input>
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+    </div>
     </div>
 </nav>
 );
