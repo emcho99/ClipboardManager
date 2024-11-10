@@ -1,4 +1,4 @@
-using ClipboardManager.Server.DatabaseModel;
+﻿using ClipboardManager.Server.DatabaseModel;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,7 +22,20 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllersWithViews();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(swaggerGenOptions =>
+{
+  swaggerGenOptions.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+  {
+    Version = "v1",
+    Title = "ClipboardManager API",
+    Description = "The Clipboard Manager is a web-based application designed to help users easily manage, store and organize their clipboard content across different devices.",
+    Contact = new Microsoft.OpenApi.Models.OpenApiContact
+    {
+      Name = "Emir Aljović",
+      Url = new Uri("https://github.com/emcho99")
+    }
+  });
+});
 
 // Connect to database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
