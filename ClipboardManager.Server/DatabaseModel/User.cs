@@ -15,7 +15,7 @@ namespace ClipboardManager.Server.DatabaseModel
         public string Name { get; set; } = "";
         public string LastName { get; set; } = "";
         public string Email { get; set; } = "";
-        public string Adress { get; set; } = "";
+        public string Address { get; set; } = "";
 
         public static string Hash(string password, string passwordSalt)
         {
@@ -34,7 +34,7 @@ namespace ClipboardManager.Server.DatabaseModel
                 name = this.Name,
                 lastName = this.LastName,
                 email = this.Email,
-                address = this.Adress
+                address = this.Address
             };
         }
     }

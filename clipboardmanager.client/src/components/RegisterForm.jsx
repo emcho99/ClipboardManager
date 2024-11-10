@@ -11,7 +11,6 @@ const RegisterForm = () => {
   });
 
   const handleChange = (e) => {
-    //const [name, setName] = e.target;
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -48,7 +47,7 @@ const RegisterForm = () => {
       }
     } catch (error) {
       console.error('Error: ', error);
-      alert('An error has occourred');
+      alert('Doslo je do greske!');
     }
   };
 
@@ -59,15 +58,15 @@ const RegisterForm = () => {
         <input type="text" name="username" value={formData.username} onChange={handleChange} required />
       </div>
       <div>
-        <label>Password:</label>
+        <label>Sifra:</label>
         <input type="password" name="password" value={formData.password} onChange={handleChange} required />
       </div>
       <div>
-        <label>First Name:</label>
+        <label>Ime:</label>
         <input type="text" name="name" value={formData.name} onChange={handleChange} required />
       </div>
       <div>
-        <label>Last Name:</label>
+        <label>Prezime:</label>
         <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
       </div>
       <div>
@@ -75,10 +74,10 @@ const RegisterForm = () => {
         <input type="email" name="email" value={formData.email} onChange={handleChange} required />
       </div>
       <div>
-        <label>Address:</label>
+        <label>Adresa:</label>
         <input type="text" name="address" value={formData.address} onChange={handleChange} required />
       </div>
-      <button type="submit">Register</button>
+      <button type="submit">Registruj se</button>
     </form>
   );
 };
