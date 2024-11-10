@@ -52,33 +52,106 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Username:</label>
-        <input type="text" name="username" value={formData.username} onChange={handleChange} required />
-      </div>
-      <div>
-        <label>Sifra:</label>
-        <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-      </div>
-      <div>
-        <label>Ime:</label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-      </div>
-      <div>
-        <label>Prezime:</label>
-        <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-      </div>
-      <div>
-        <label>Adresa:</label>
-        <input type="text" name="address" value={formData.address} onChange={handleChange} required />
-      </div>
-      <button type="submit">Registruj se</button>
-    </form>
+    <div className="container mt-5">
+      <h2 className="text-center mb-4">Registracija</h2>
+      <form onSubmit={handleSubmit} className="bg-light p-4 rounded shadow-sm">
+        <div className="form-group">
+          <label htmlFor="username">
+            <i className="fa fa-user"></i> Username:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="username"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            placeholder="Unesite username"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="password">
+            <i className="fa fa-lock"></i> Sifra:
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Unesite sifru"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="name">
+            <i className="fa fa-id-card"></i> Ime:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Unesite ime"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="lastName">
+            <i className="fa fa-id-card"></i> Prezime:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            placeholder="Unesite prezime"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">
+            <i className="fa fa-envelope"></i> Email:
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Unesite email"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="address">
+            <i className="fa fa-map-marker-alt"></i> Adresa:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            placeholder="Unesite adresu"
+            required />
+        </div>
+        <button
+          type="submit"
+          className="btn btn-primary btn-block mt-3"
+        >
+          <i className="fa fa-user-plus"></i> Registruj se
+        </button>
+      </form>
+    </div>
   );
 };
 
