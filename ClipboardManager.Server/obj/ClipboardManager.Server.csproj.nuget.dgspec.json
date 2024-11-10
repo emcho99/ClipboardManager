@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/home/emcho/ClipboardManager/ClipboardManager.Server/ClipboardManager.Server.csproj": {}
+    "C:\\Users\\almin\\Documents\\projects\\ClipboardManager\\ClipboardManager.Server\\ClipboardManager.Server.csproj": {}
   },
   "projects": {
-    "/home/emcho/ClipboardManager/ClipboardManager.Server/ClipboardManager.Server.csproj": {
+    "C:\\Users\\almin\\Documents\\projects\\ClipboardManager\\ClipboardManager.Server\\ClipboardManager.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/emcho/ClipboardManager/ClipboardManager.Server/ClipboardManager.Server.csproj",
+        "projectUniqueName": "C:\\Users\\almin\\Documents\\projects\\ClipboardManager\\ClipboardManager.Server\\ClipboardManager.Server.csproj",
         "projectName": "ClipboardManager.Server",
-        "projectPath": "/home/emcho/ClipboardManager/ClipboardManager.Server/ClipboardManager.Server.csproj",
-        "packagesPath": "/home/emcho/.nuget/packages/",
-        "outputPath": "/home/emcho/ClipboardManager/ClipboardManager.Server/obj/",
+        "projectPath": "C:\\Users\\almin\\Documents\\projects\\ClipboardManager\\ClipboardManager.Server\\ClipboardManager.Server.csproj",
+        "packagesPath": "C:\\Users\\almin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\almin\\Documents\\projects\\ClipboardManager\\ClipboardManager.Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/emcho/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\almin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -41,6 +53,10 @@
             "Microsoft.AspNetCore.SpaProxy": {
               "target": "Package",
               "version": "[8.*-*, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -58,12 +74,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.8, 8.0.8]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -72,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
