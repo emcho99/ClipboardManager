@@ -6,6 +6,8 @@ import Clipboard from './pages/Clipboard';
 import Friends from './pages/Friends';
 import TopClips from './pages/TopClips';
 import Settings from './pages/Settings';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import './App.css';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
                 <Route path='/Friends' element={<Friends />} />
                 <Route path='/TopClips' element={<TopClips />} />
                 <Route path='/Settings' element={<Settings />} />
+                <Route path='/Login' element={<Login />} />
+                <Route path='/Register' element={<Register />} />
             </Routes>
         </BrowserRouter>
     );
