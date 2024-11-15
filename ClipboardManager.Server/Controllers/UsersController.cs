@@ -15,6 +15,12 @@ namespace ClipboardManager.Server.Controllers
       _context = context;
     }
 
+    //[HttpGet("login")]
+    //public IActionResult Login([FromBody] User neUser)
+    //{
+
+    //}
+
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] User newUser)
     {
