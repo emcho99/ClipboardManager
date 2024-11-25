@@ -23,11 +23,21 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="navbar-left">
-        <Link to="/Settings">Settings</Link>
-      </div>
-    </nav>
-  );
+
+    <div className="navbar-left">
+    <div className="wrap">
+   <div className="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+     </input>
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+  <Link to="/Settings">Settings</Link>
+   </div>
+    </div>
+    </div>
+</nav>
+);
 };
 
 export default Navbar;
