@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const LoginForm = () => {
@@ -8,6 +9,8 @@ const LoginForm = () => {
   });
 
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,7 +47,10 @@ const LoginForm = () => {
 
     const data = await response.json();
     localStorage.setItem('token', data.Token);
+    localStorage.setItem('username', formData.email);
+
     alert('Prijava uspjesna: ', data);
+    navigate('/', { state: { username: data.Username } });
   }
 
   return (
