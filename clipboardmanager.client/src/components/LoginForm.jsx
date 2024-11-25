@@ -44,7 +44,7 @@ const LoginForm = () => {
 
     const data = await response.json();
     localStorage.setItem('token', data.Token);
-    console.log('Prijava uspjesna: ', data);
+    alert('Prijava uspjesna: ', data);
   }
 
   return (
