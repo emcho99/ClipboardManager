@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-
-<nav className="navbar">
-    <div className="navbar-right">
+    <nav className="navbar">
+      <div className="navbar-right">
         <Link to="/">Clipboard Manager</Link>
-    </div>
+      </div>
 
-    <div className="navbar-center">
+      <div className="navbar-center">
         <ul className="navbar-links">
-            <li>
-                <Link to="/Clipboard">Clipboard</Link>
-              </li>
-            <li>
-                <Link to="/Friends">Friends</Link>
-              </li>
-            <li>
-                <Link to="/TopClips">Top Clips</Link>
-              </li>
+          <li>
+            <Link to="/Clipboard">Clipboard</Link>
+          </li>
+          <li>
+            <Link to="/Friends">Friends</Link>
+          </li>
+          <li>
+            <Link to="/TopClips">Top Clips</Link>
+          </li>
         </ul>
-    </div>
+      </div>
+
 
     <div className="navbar-left">
     <div className="wrap">
@@ -32,6 +32,7 @@ const Navbar = () => {
       <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
+  <Link to="/Settings">Settings</Link>
    </div>
     </div>
     </div>
