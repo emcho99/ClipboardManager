@@ -7,6 +7,8 @@ const LoginForm = () => {
     password: ''
   });
 
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -15,10 +17,40 @@ const LoginForm = () => {
     });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await login(formData.email, formData.password);
+      setErrorMessage('');
+    } catch (error)
+    {
+      setErrorMessage(error.message);
+    }
+  };
+
+  async function login(email, password) {
+    const response = await fetch('https://localhost:7286/api/users/login', {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || 'Prijava nije uspjela');
+    }
+
+    const data = await response.json();
+    localStorage.setItem('token', data.Token);
+    console.log('Prijava uspjesna: ', data);
+  }
+
   return (
     <div className="container mt-5">
       <h2 className="text-center mb-4">Prijava</h2>
-      <form className="bg-light p-4 rounded shadow-sm">
+      <form className="bg-light p-4 rounded shadow-sm" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">
             <i className="fa fa-envelope"></i> Email:
@@ -28,6 +60,8 @@ const LoginForm = () => {
             className="form-control"
             name="email"
             placeholder="Unesite email"
+            value={formData.email}
+            onChange={handleChange}
             required
           />
         </div>
@@ -39,11 +73,19 @@ const LoginForm = () => {
           <input
             type="password"
             className="form-control"
-            name="email"
+            name="password"
             placeholder="Unesite sifru"
+            value={formData.password}
+            onChange={handleChange}
             required
           />
         </div>
+
+        {errorMessage && (
+          <div className="alert alert-danger mt-3" role="alert">
+            {errorMessage}
+          </div>
+        )}
 
         <button
           type="submit"

@@ -9,8 +9,8 @@ const Settings = () => {
       <Navbar />
       Settings
       <div className="options d-flex flex-column">
-        <Link to="/Login">Prijavi se</Link>
-        <Link to="/Register">Registruj se</Link>
+        <Link className="btn btn-primary my-2" to="/Login" style={{ width: 'fit-content' }}>Prijavi se</Link>
+        <Link className="btn btn-secondary my-2" to="/Register" style={{ width: 'fit-content' }}>Registruj se</Link>
       </div>
     </div>
   );
