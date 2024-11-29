@@ -15,10 +15,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-          <Route
-            path='/'
-            element={ isLoggedIn ? <Home /> : <Navigate to='/Login' replace /> }
-          />
+                <Route path='/' element={<Home /> } />
                 <Route path='/Clipboard' element={<Clipboard />} />
                 <Route path='/Friends' element={<Friends />} />
                 <Route path='/TopClips' element={<TopClips />} />
