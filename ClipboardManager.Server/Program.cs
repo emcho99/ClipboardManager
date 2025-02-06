@@ -1,6 +1,8 @@
 ﻿using ClipboardManager.Server.DatabaseModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Sqlite;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
@@ -53,10 +55,17 @@ builder.Services.AddSwaggerGen(swaggerGenOptions =>
   });
 });
 
-// Connect to database
+// Connect to database - mysql server database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ClipboardManagerContext>(options =>
   options.UseSqlServer(connectionString));
+
+// Connect to database - sqlite database
+//var connectionString = builder.Configuration.GetConnectionString("Database");
+//builder.Services.AddDbContext<ClipboardManagerContext>(options =>
+//{
+//  options.UseSqlite(builder.Configuration.GetConnectionString("Database"));
+//});
 
 var app = builder.Build();
 

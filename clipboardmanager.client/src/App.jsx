@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Clipboard from './pages/Clipboard';
@@ -11,17 +11,61 @@ import Register from './pages/Register';
 import './App.css';
 
 function App() {
-  const isLoggedIn = !!localStorage.getItem('token');
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home /> } />
-                <Route path='/Clipboard' element={<Clipboard />} />
-                <Route path='/Friends' element={<Friends />} />
-                <Route path='/TopClips' element={<TopClips />} />
-                <Route path='/Settings' element={<Settings />} />
-                <Route path='/Login' element={<Login />} />
-                <Route path='/Register' element={<Register />} />
+
+  const username = location.state?.username || localStorage.getItem('username');
+
+  //const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  //useEffect(() => {
+  //  const handleUserNameChange = (event) => {
+  //    if (event.key === "username") {
+  //      const username = location.state?.username || localStorage.getItem('username');
+  //      setIsLoggedIn(username ? true : false);
+  //    }
+  //  }
+  //  window.addEventListener("login", handleUserNameChange)
+  //  return () => {
+  //    window.removeEventListener("login", handleUserNameChange);
+  //  }
+  //}, [isLoggedIn]);
+
+
+  return (
+    <BrowserRouter>
+      {/*<Routes>*/}
+      {/*  {username ?*/}
+      {/*    <>*/}
+      {/*      <Route path='/' element={<Home />} />*/}
+      {/*      <Route path='/Clipboard' element={<Clipboard />} />*/}
+      {/*      <Route path='/Friends' element={<Friends />} />*/}
+      {/*      <Route path='/TopClips' element={<TopClips />} />*/}
+      {/*      <Route path='/Settings' element={<Settings />} />*/}
+      {/*    </> :*/}
+      {/*  <>*/}
+      {/*      <Route path='/' element={<Home />} />*/}
+      {/*      <Route path='/Login' element={<Login />} />*/}
+      {/*      <Route path='/Register' element={<Register />} />*/}
+      {/*    </>*/}
+      {/*   }*/}
+
+      {/*</Routes>*/}
+      <Routes>
+        {username ?
+            <>
+              <Route path='/' element={<Home />} />
+              <Route path='/Clipboard' element={<Clipboard />} />
+              <Route path='/Friends' element={<Friends />} />
+              <Route path='/TopClips' element={<TopClips />} />
+              <Route path='/Settings' element={<Settings />} />
+            </> :
+            <>
+              <Route path='/' element={<Home />} />
+              <Route path='/Login' element={<Login />} />
+              <Route path='/Register' element={<Register />} />
+            </>
+
+                } 
+                
             </Routes>
         </BrowserRouter>
     );

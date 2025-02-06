@@ -49,7 +49,6 @@ const LoginForm = () => {
     localStorage.setItem('token', data.Token);
     localStorage.setItem('username', formData.email);
 
-    alert('Prijava uspjesna: ', data);
     navigate('/', { state: { username: data.Username } });
   }
 
