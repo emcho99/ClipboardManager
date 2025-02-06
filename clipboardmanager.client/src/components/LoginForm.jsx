@@ -32,7 +32,7 @@ const LoginForm = () => {
   };
 
   async function login(email, password) {
-    const response = await fetch('https://localhost:7286/api/users/login', {
+    const response = await fetch('http://localhost:5143/api/users/login', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',

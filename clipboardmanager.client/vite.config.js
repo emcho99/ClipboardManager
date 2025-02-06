@@ -10,7 +10,7 @@ import { env } from 'process';
 const baseFolder =
     env.APPDATA !== undefined && env.APPDATA !== ''
         ? `${env.APPDATA}/ASP.NET/https`
-        : `${env.HOME}/.aspnet/https`;
+        : `${env.HOME}/.aspnet/DataProtection-Keys`;
 
 const certificateName = "clipboardmanager.client";
 const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
