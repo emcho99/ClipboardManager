@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import Box from "../components/Box";
 import "./Home.css";
 
 const Home = () => {
@@ -37,6 +38,7 @@ const Home = () => {
     <div>
       <Navbar />
       Dobrodosli
+            <Box />
     </div>
   )
 }
