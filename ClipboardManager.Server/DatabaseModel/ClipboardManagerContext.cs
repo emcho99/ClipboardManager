@@ -7,5 +7,6 @@ namespace ClipboardManager.Server.DatabaseModel
   {
     public ClipboardManagerContext(DbContextOptions<ClipboardManagerContext> options) : base(options) {}
     public DbSet<User> User { get; set; }
+    public DbSet<FileModel> FileModel { get; set; }
   }
 }
